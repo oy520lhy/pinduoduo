@@ -1,0 +1,20 @@
+<template name="homeprod">
+  <view class='homeprod'>
+    <image mode='aspectFit' src="{{item.imgUrl}}"></image>
+    <text class='description'>{{item.description}}</text>
+    <view class='price_join_info'>
+      <view class='left_side'>
+        <text>￥{{item.price}}</text>
+        <text>已团{{item.saledNum}}万件</text>
+      </view>
+      <view class='right_side'>
+        <view class='customers'>
+          <image class='avatar_img' mode='scaleToFill' src='{{item.customer1}}'></image>
+          <image class='avatar_img' mode='scaleToFill' src='{{item.customer2}}'></image>
+        </view>
+
+        <navigator url="{{item.linkUrl}}">去开团 ></navigator>
+      </view>
+    </view>
+  </view>
+</template>

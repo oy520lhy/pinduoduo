@@ -1,0 +1,49 @@
+<view class="container newgoods">
+  <import src="/templates/nheader.wxml" />
+
+  <template
+    is="newgoodsHeader"
+    data="{{color: '#ee8129', title: '限时试新', src: '/pages/newgoods/img/present.png'}}"
+  />
+
+  <scroll-view scroll-x="true" class='trynew_view'>
+    <view class="trynew_wrapper" style="width: {{trynewWrapperWidth}}">
+      <navigator
+        url="/pages/test/test?id={{item.id}}"
+        open-type="navigate"
+        class='trynew_item'
+        wx:for="{{limitedData}}"
+        wx:key style="width: {{trynewItemWidth}}">
+          <image mode="aspectFill" class='item_image' src="{{item.src}}"></image>
+          <text class='description'>{{item.description}}</text>
+          <text class='price'>￥{{item.price}}</text>
+      </navigator>
+    </view>
+  </scroll-view>
+  
+  <template
+    is="newgoodsHeader"
+    data="{{color: '#e02e24', title: '精选新品', src: '/pages/newgoods/img/sbag.png'}}"
+  />
+
+  <view class='collections'>
+    <navigator
+      class='collect_item'
+      wx:key wx:for='{{collections}}'
+      url="/pages/test/test?id={{item.id}}"
+      open-type="navigate"
+    >
+      <image mode="aspectFill" class='collect_item_img' src="{{item.src}}" style="height: {{collectItemHeight}}"></image>
+      <text class='collect_description'>{{item.description}}</text>
+      <view class='price_customer'>
+        <text class='collect_price'>￥{{item.price}}</text>
+        <view class='customers'>
+          <image class='avatar_img' mode='scaleToFill' src='{{item.customer1}}'></image>
+          <image class='avatar_img' mode='scaleToFill' src='{{item.customer2}}'></image>
+        </view>
+      </view>
+    </navigator>
+  </view>
+
+  <view class='loading' hidden="{{!isLoading}}">加载数据中...</view>
+</view>

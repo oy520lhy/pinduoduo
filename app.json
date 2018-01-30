@@ -1,0 +1,52 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/newgoods/newgoods",
+    "pages/search/search",
+    "pages/talk/talk",
+    "pages/user/user",
+    "pages/test/test"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#e02e24",
+    "navigationBarTitleText": "三维码科技",
+    "navigationBarTextStyle":"white"
+  },
+  "tabBar":{
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "utils/img/home.png",
+        "selectedIconPath": "utils/img/home_selected.png"
+      },
+      {
+        "pagePath": "pages/newgoods/newgoods",
+        "text": "新品",
+        "iconPath": "utils/img/newgoods.png",
+        "selectedIconPath": "utils/img/newgoods_selected.png"
+      },
+      {
+        "pagePath": "pages/search/search",
+        "text": "搜索",
+        "iconPath": "utils/img/search.png",
+        "selectedIconPath": "utils/img/search_selected.png"
+      },
+      {
+        "pagePath": "pages/talk/talk",
+        "text": "聊天",
+        "iconPath": "utils/img/talk.png",
+        "selectedIconPath": "utils/img/talk_selected.png"
+      },
+      {
+        "pagePath": "pages/user/user",
+        "text": "个人中心",
+        "iconPath": "utils/img/user.png",
+        "selectedIconPath": "utils/img/user_selected.png"
+      }
+    ],
+    "selectedColor": "#e02e24"
+  }
+}

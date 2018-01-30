@@ -1,0 +1,99 @@
+<view class="container user">
+  <view class='base-info'>
+    <button class='login-btn' wx:if="{{!isAuthoried}}" open-type='getUserInfo' bindgetuserinfo="getUserInfo">登录</button>
+    <block wx:else>
+      <image class='userinfo-avatar' src="{{userInfo.avatarUrl}}"></image>
+      <text class='userinfo-nickname'>{{userInfo.nickName}}</text>
+      <button class='refresh-btn'>
+        <image mode='widthFix' src='./img/refresh.png'></image>
+        <text>更新资料</text>
+      </button>
+    </block>
+  </view>
+
+  <view class='orders-baseinfo menu-block'>
+    <navigator url="" class='go-all-orders'>
+      <text>我的订单</text>
+      <view class='right-side'>
+        <text>全部订单</text>
+        <image mode='widthFix' src="./img/morearrow.png"></image>
+      </view>
+    </navigator>
+
+    <view class='order-sort'>
+      <navigator class='sort-item'>
+        <image mode='widthFix' src='./img/waitpay.png'></image>
+        <text>待付款</text>
+      </navigator>
+
+      <navigator class='sort-item'>
+        <image mode='widthFix' src='./img/share.png'></image>
+        <text>待分享</text>
+      </navigator>
+
+      <navigator class='sort-item'>
+        <image mode='widthFix' src='./img/car.png'></image>
+        <text>待发货</text>
+      </navigator>
+
+      <navigator class='sort-item'>
+        <image mode='widthFix' src='./img/goods.png'></image>
+        <text>待收货</text>
+      </navigator>
+
+      <navigator class='sort-item'>
+        <image mode='widthFix' src='./img/evaluate.png'></image>
+        <text>待评价</text>
+      </navigator>
+    </view>
+  </view>
+
+  <view class='source-sort menu-block'>
+    <navigator class='sort-item'>
+      <image mode='widthFix' src='./img/coupon.png'></image>
+      <text>我的优惠卷</text>
+    </navigator>
+
+    <navigator class='sort-item'>
+      <image mode='widthFix' src='./img/collection.png'></image>
+      <text>我的收藏</text>
+    </navigator>
+
+    <navigator class='sort-item'>
+      <image mode='widthFix' src='./img/history.png'></image>
+      <text>我的足迹</text>
+    </navigator>
+
+    <navigator class='sort-item'>
+      <image mode='widthFix' src='./img/refund.png'></image>
+      <text>退款/售后</text>
+    </navigator>
+  </view>
+
+  <view class='more-menu menu-block'>
+    <navigator class='menu-item' url="">
+      <image mode='widthFix' src="./img/group.png"></image>
+      <text>我的拼团</text>
+    </navigator>
+
+    <navigator class='menu-item' url="">
+      <image mode='widthFix' src="./img/free.png"></image>
+      <text>我的免单券</text>
+    </navigator>
+
+    <navigator class='menu-item' url="">
+      <image mode='widthFix' src="./img/location.png"></image>
+      <text>收货地址</text>
+    </navigator>
+
+    <navigator class='menu-item' url="">
+      <image mode='widthFix' src="./img/phone.png"></image>
+      <text>官方客服</text>
+    </navigator>
+
+    <navigator class='menu-item' url="">
+      <image mode='widthFix' src="./img/setting.png"></image>
+      <text>设置</text>
+    </navigator>
+  </view>
+</view> 

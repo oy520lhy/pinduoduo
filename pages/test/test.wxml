@@ -1,0 +1,4 @@
+<view class="container newgoods">
+  {{text}}
+  <text>产品编号：{{prodId}}</text>
+</view>

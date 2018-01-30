@@ -1,0 +1,6 @@
+<template name="newgoodsHeader">
+  <view class="newgoods_header">
+    <image class='nheader_img' src="{{src}}"></image>
+    <text class='nheader_title' style="color:{{color}}">{{title}}</text>
+  </view>
+</template>

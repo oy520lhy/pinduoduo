@@ -1,0 +1,50 @@
+<view class="home">
+  <swiper
+    indicator-dots="{{true}}"
+    indicator-color="rgba(255, 255, 255, 0.6)"
+    indicator-active-color="#e02e24"
+    autoplay="{{true}}"
+  >
+    <swiper-item
+      wx:for="{{banners}}"
+      wx:key
+    >
+      <navigator url="{{item.linkUrl}}">
+        <image mode="widthFix" src="{{item.imgUrl}}" class="slide-image"/>
+      </navigator>
+    </swiper-item>
+  </swiper>
+
+  <scroll-view class='activities' scroll-x bindscroll="bindscroll">
+    <view class='activities-wrap' style="width: {{activitiesWrapWidth}}">
+      <navigator
+        wx:for="{{activities}}"
+        wx:key
+        style="width: {{activitiesItemWidth}}"
+        class='activities-item'
+        url="{{item.linkUrl}}"
+      >
+        <image mode='widthFix' src='{{item.imgUrl}}'></image>
+        <text>{{item.name}}</text>
+      </navigator>
+    </view>
+  </scroll-view>
+  <view class='indicator-wrap'>
+    <view class='scroll-indicator'>
+      <view class='indicator-line' style="width: {{indicatorLineWidth}};margin-left: {{indicatorMarginLeft}};"></view>
+    </view>
+  </view> 
+
+  <view class="festival-active">
+    <image mode='widthFix' src='./img/active.jpg'></image>
+  </view>
+
+  <import src="/templates/homeprod.wxml" />
+
+  <template
+    is="homeprod"
+    wx:key
+    wx:for="{{products}}"
+    data="{{item}}"
+  />
+</view>

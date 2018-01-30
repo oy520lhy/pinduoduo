@@ -1,0 +1,22 @@
+<!--index.wxml-->
+<view class="container index">
+  <scroll-view
+    class='sorts-wrap'
+    scroll-x
+    scroll-with-animation="{{true}}"
+    scroll-left="{{scrollLeft}}"
+  >
+    <view
+      wx:for="{{productSorts}}"
+      wx:key
+      bindtap='changeSortId'
+      id='{{item.sortId}}'
+      class="sort-item {{item.sortId === currentSortId ? 'active-sort-item' : ''}}"
+    >
+      {{item.text}}
+    </view>
+  </scroll-view>
+
+  <home wx:if="{{currentSortId === 0}}" />
+  <view wx:else>{{currentSortId}}</view>
+</view>
