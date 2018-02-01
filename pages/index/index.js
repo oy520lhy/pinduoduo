@@ -5,6 +5,7 @@ Page({
     scrollLeft: 0,
     currentSortId: 0,
     productSorts: [],
+    otherSortCompoent: []
   },
   onLoad: function () {
   },
@@ -12,8 +13,12 @@ Page({
   onReady: function () {
     let that = this
 
+    let otherSortCompoent = this.getProductSorts()
+    otherSortCompoent.shift()
+
     this.setData({
-      productSorts: this.getProductSorts()
+      productSorts: this.getProductSorts(),
+      otherSortCompoent: otherSortCompoent
     })
 
     wx.getSystemInfo({

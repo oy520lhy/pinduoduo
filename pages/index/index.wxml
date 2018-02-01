@@ -18,5 +18,5 @@
   </scroll-view>
 
   <home wx:if="{{currentSortId === 0}}" />
-  <view wx:else>{{currentSortId}}</view>
+  <other wx:key wx:for="{{otherSortCompoent}}" wx:if="{{currentSortId === item.sortId}}" sort-id="{{currentSortId}}" />
 </view>

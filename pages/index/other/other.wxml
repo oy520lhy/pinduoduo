@@ -1,0 +1,29 @@
+<view class="other">
+  <view class='menu'>
+    <navigator
+      class='menu_item'
+      wx:key
+      wx:for="{{menuList}}"
+      url="/pages/test/test"
+    >
+      <image mode='widthFix' src='{{item.imgUrl}}'></image>
+      <text>{{item.name}}</text>
+    </navigator>
+
+    <navigator class='menu_item' url="/pages/test/test">
+      <image mode='widthFix' src='./img/more.png'></image>
+      <text>查看全部</text>
+    </navigator>
+  </view>
+
+  <view class='products_list'>
+    <navigator url="{{item.linkUrl}}" class='prod_item' wx:key wx:for="{{prodData}}">
+      <image mode='aspectFill' src='{{item.imgUrl}}'></image>
+      <text class='description'>{{item.description}}</text>
+      <view class='price_saled'>
+        <view class='price'>￥<text>{{item.price}}</text></view>
+        <text>已团{{item.saledNum}}件</text>
+      </view>
+    </navigator>
+  </view>
+</view>

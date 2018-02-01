@@ -1,7 +1,7 @@
 /**index.wxss**/
 /* 顶部产品分类 */
 .index {
-  padding-top: 70rpx;
+  padding-top: 74rpx;
 }
 
 .sorts-wrap {
